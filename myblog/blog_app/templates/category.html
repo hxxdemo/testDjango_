@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block category %}
+    <a class="header red item" href="index">Home</a>
+    {% for cate in cates %}
+        <a class="teal item" href="detail/{{ cate.id }}">{{ cate.name }}</a>   
+    {% endfor %}      
+{% endblock category %}
+

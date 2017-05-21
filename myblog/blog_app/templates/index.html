@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+    {% block cagegory %}
+    <a class="header red item" href="{% url 'index' %}">Home</a>
+    <a class="teal item" href="?tag=python">python</a>
+    <a class="item" href="?tag=web">web</a>
+    <a class="item" href="?tag=life">life</a> 
+    {% endblock cagegory %}
+
+
+{% block article_body %}
+    {% for article in article_list %}
+        <h1 class="ui header">
+            <a href="/detail/{{ article.id }}">{{ article.title }}</a>
+        </h1>
+        <p>
+            {{ article.content }}
+        </p>
+        <span>{{ article.published_time | date:"Y-m-d" }}</span>
+        <div class="ui divider"></div>
+    {% endfor %}    
+{% endblock article_body %}
+
+{% block paginator %}
+    
+{% endblock paginator %}

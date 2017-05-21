@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{% block titile %}welcome{% endblock titile %}</title>
+     <link rel="stylesheet" type="" href="{% static 'css/semantic.css' %}">
+    {% block css %}
+        
+    {% endblock css %}
+    {% block js %}
+        
+    {% endblock js %}
+</head>
+<body>
+    <!--nav-->
+    <div class="ui fixed inverted menu">
+    {% block cagegory %}
+    <a class="header red item" href="{% url 'index' %}">Home</a>
+    <a class="teal item" href="?tag=python">python</a>
+    <a class="item" href="?tag=web">web</a>
+    <a class="item" href="?tag=life">life</a> 
+    {% endblock cagegory %}
+        <div class="right menu">
+            <a class="blue item" href='#'>
+                About Me
+            </a>
+        </div>      
+    </div>
+    
+    <!--body-->
+    <div class="ui vertical basic segment">
+        <div class="ui image">
+            <img src="{% static 'image/grey_banner.jpg' %}">
+        </div>
+    </div>
+    <br>
+    <div class="ui container basic segment">
+        <div class="ui grid">
+
+            <div class="eleven wide column">
+                {% block article_body %}
+                    
+                {% endblock article_body %}
+                {% block paginator %}
+                    
+                {% endblock paginator %}
+            </div>
+            
+            <div class="five wide column">
+                <div class="ui  vertical text menu">
+                    <div class="item">
+                        <div class="ui header">
+                            最近发布
+                        </div>
+                    </div>
+                    <a href="" class="item">one</a>
+                    <a href="" class="item">two</a>
+                    <a href="" class="item">three</a>
+                    <a href="" class="item">three</a>
+                    <a href="" class="item">threeasdfasdfsf</a>
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h5 class="ui header">标签</h5>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!--footer-->
+    <div class="ui inverted vertical very padded segment">
+        <div class="ui grid">
+            <div class="four wide column"></div>
+            <div class="eight wide column">
+                <div class="ui vertical inverted text menu">
+                    <h2 class="ui header inverted">
+                        noverlty endless
+                    </h2>
+                </div>
+            </div>
+            <div class="four wide column"></div>
+        </div>
+    </div>
+</body>
+</html>

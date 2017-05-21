@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+{% block cagegory %}
+    <a class="header red item" href="{% url 'index' %}">Home</a>
+    <a class="teal item" href="{% url 'index' %}?tag=python">python</a>
+    <a class="item" href="{% url 'index' %}?tag=web">web</a>
+    <a class="item" href="{% url 'index' %}?tag=life">life</a> 
+{% endblock cagegory %}
+
+
+
+{% block article_body %}
+    <h1> {{ article_id.title }}</h1>
+    <br>
+    <span> {{ article_id.published_time | date:"Y-m-d"  }}</span>  
+    <p> {{ article_id.content }}</p>
+{% endblock article_body %}
