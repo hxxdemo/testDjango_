@@ -1,0 +1,65 @@
+body{
+    font-family: 'webfont' !important;
+}
+.header.item>.ui.image{
+    margin-left: 8px;
+    height: 35px;
+    width: 105px;
+}
+
+.ui.borderless.menu.container>.item{
+    font-weight: bold;
+}
+
+.ui.segment.body.basic.container{
+    width: 878px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}
+
+.ui.inverted.header{
+    padding: 0;
+    position:relative;
+    transform: translateY(-50%);
+    top:50%;
+}
+
+span{
+    color:rgb(180, 180, 180);
+}
+
+.ui.side.outer.basic.segment{
+    padding: 5px 0 5px 0;
+    border-top: solid red 3px;
+    width: 204px;
+}
+
+
+.ui.basic.segment.foot{
+    padding: 0px;
+}
+
+
+.sidbararrow{
+  background: url('../images/Triangle.png');
+    box-sizing: border-box;
+    width: 6px;
+    height: 8px;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-top: 8px;
+}
+a.item.uilist{
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #333!important;
+  line-height: 1.5!important;
+  font-size: 12px;
+}
+ .listdescription{
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #ccc;
+  font-size: 10px;
+ }

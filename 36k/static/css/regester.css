@@ -1,0 +1,99 @@
+body{
+    background-image: url(../images/backgroundimg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1{
+    font-family:"webfont"!important;
+    font-size: 50px!important;
+    color: #f30c28!important;
+    height: 74px;
+    margin-top: 251px!important;
+    transform: translate(-50%);
+    position: absolute;
+    left: 50%;
+}
+.ui.middle.aligned.image{
+    width: 17px!important;
+    height: 17px!important;
+}
+input{
+    border-radius: 31.5px!important;
+    width: 392px!important;
+    height: 31px!important;
+    background-color: #ffffff!important;
+    border: solid 1px #ededed!important;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    font-family:"webfont"!important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-family:"webfont"!important;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-family:"webfont"!important;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-family:"webfont"!important;
+}
+.ui.red.circular.button{
+    width: 392px;
+    height: 31px;
+    border-radius: 31.5px;
+    background-color: #f30c28;
+    font-family:"webfont"!important;
+    margin-left: 20px;
+    padding-top: 9px;
+}
+.content{
+    transform: translate(-50%);
+    position: absolute;
+    left: 50%;
+    margin-top: 357px;
+}
+.footer>.red.button{
+    width: 31px!important;
+    height: 62px;
+    border-radius: 15.5px;
+    background-color: #f30c28;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    left: 50%;
+    top: 763px;
+}
+.ui.image.home{
+    width: 13.3px;
+    height: 12px;
+    transform: translate(-50%,-50%);
+    position:absolute;
+    left: 50%;
+    top:749px;
+}
+.ui.divider{
+    width: 886px;
+    height: 3px;
+    border: solid 1px #ededed;
+    margin-top: 0;
+    transform: translate(-50%);
+    position: absolute;
+    left: 50%;
+    top: 763px;
+}
+h4{
+    font-family:"webfont"!important;
+    font-size: 12px!important;
+    color: #ffffff;
+    transform: translate(-50%);
+    position:absolute;
+    margin-top: 0;
+    left: 50%;
+    top:766px;
+}
+.ui.image.title{
+    width: 150px;
+    height: 50px;
+    transform: translate(-50%);
+    position:absolute;
+    left: 50%;
+    top:814px;
+}

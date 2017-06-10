@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>知日报 - 首页</title>
+        <link rel="stylesheet" href="{% static 'css/semantic.css' %}" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="{% static 'css/homepage.css' %}" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="http://www.iconfont.cn/webfont/#!/webfont/index" >
+    </head>
+    <body>
+        <!--body-->
+        <div class="ui basic segment body" style="border-top:solid red 4px;padding:0;">
+            <!--body_nav-->
+            <div class="ui basic segment" style="border-bottom:solid rgb(230, 230, 230) 1px;padding:0;">
+                <div class="ui borderless menu container" style="border:0;box-shadow:none;width:878px;">
+                    <div class="header item">
+                        <img src="{% static 'images/icon.png' %}" style="width:42px;height:42px;"/>
+                        <img src="{% static 'images/zhiribao.png' %}" class="ui image"/>
+                    </div>
+                    <div class="item">
+                        <a href="#" class="item" style="color:red;">首页</a>
+                    </div>
+                    {% for cate in cates %}
+                        <div class="item">
+                        <a href="/category/{{ cate.id }}" class="item">{{ cate.id }}</a>
+                    </div>
+                    {% endfor %}
+                    
+                    
+                    </div>
+                    <div class="right menu">
+                        <div class="item">
+                            <a href="#">
+                                <img src="{% static 'images/login.png' %}" style="height:26px;width:24px;"/>
+                                <p style="margin-bottom:10px;color:black;margin-top:5px;">登录</p>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#">
+                                <img src="{% static 'images/register.png' %}" style="height:32px;width:32px;"/>
+                                <p style="margin-bottom:10px;color:black;">注册</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--body_top-->
+            <div class="ui segment body basic container" >
+                <div class="ui horizontal basic segments" style="border: none">
+                    <div class="ui basic segment" style="background:url('/static/images/coverimg.png');height:380px;width:655px;background-size:cover;background-repeat:no-repeat;padding:0;">
+                        <a href="#" class="ui circular red button" style="padding-left:0;padding-right:0;margin-top:21px;margin-left:35px;width:88px;">今日热闻</a>
+                         <div class="ui bottom attached label" style="background-color:rgba(73, 73, 73,0.7);height:72px;padding-left:35px;">
+                            <h1 class="ui inverted header">
+                                <a href="/detail/{{big_today_news.id}}">
+                                    {{ big_today_news.title }}
+                                </a>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="ui body-top-right segment" style="height:380px;width:220px;padding:0;">
+                    {% for small_today_new in small_today_news %}
+                        <div class="ui body-top-right basic segment" style="margin-top:0;margin-left:19px;border:solid red 2px;height:118px;" >
+                            <p style="font-size:16px;">
+                                <a href="/detail/{{small_today_new.id}}">
+                                    {{ small_today_new.title }}
+                                </a>
+                            </p>
+                            <span>{{ small_today_new.publish_time |date:'Y-m-d' }}</span>
+                        </div>    
+                    {% endfor %}
+                        
+						
+                    </div>
+                </div>
+
+                <div class="ui four column grid">
+                {% for index_intro in index_intros %}
+                    <div class="column">
+                        <div class="ui basic body segment" style="background:url('upload/{{ index_intro.image }}');height:148px;width:204px;">
+                            <div class="ui bottom attached label" style="height:62px;background-color:rgba(73, 73, 73,0.7);">
+                                <h4 class="ui inverted header">
+                                <a href="/detail/{{ index_intro.id }}">
+                                    {{ index_intro.title }}
+                                </a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+
+            <!--body_divider-->
+                <div class="ui divider" style="height:3px;"></div>
+
+            <!--body_body-->
+                <div class="ui grid">
+                    <div class="twelve wide column">
+                        <div class="ui items" style="width:655px;">
+                        {% for article in article_list %}
+                            <div class="item">
+                                <div class="image" style="height:208px;width:354px;">
+                                    <img src="{% static 'images/articleimg1.png' %}" style="height:208px"/>
+                                </div>
+                                <div class="ui basic segment" style="margin:0;padding:5px 0 0 19px;">
+                                    <h3 class="ui header">
+                                        {{ article.title }}
+                                    </h3>
+                                    <p>
+                                    <a href="/detail/{{ article.id }}">
+                                        {{ article.content }}
+                                    </a>
+                                    </p>
+                                    <span style="position:absolute;transform:translate(0,-100%);bottom:-10%;">
+                                        {{ article.publish_time |date:'Y-m-d' }}
+                                    </span>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="ui pagination menu" style="aligned-content:center;">
+                        {% if article_list.has_previous %}
+                            <a class="item" href="?page={{ article_list.previous_page_number }}">
+                                <i class="icon red left caret"></i>
+                            </a>
+                        {% else %}
+                            <a href="?page={{ article_list.start_index}" class="disabled item">
+                                <i class="icon left caret"></i>
+                            </a>
+                        {% endif %}    
+                        
+                        {% for page_number in article_list.paginator.page_range %}
+                            {% ifequal page_number article_list.number  %} 
+                                <a href="?page={{ page_number }}" class="active item" style="background-color: red; color: white;">
+                                            {{ page_number }}
+                                        </a>
+                            {% else %}
+                                <a href="?page={{ page_number }}" class="item">
+                                            {{ page_number }}
+                                        </a>     
+                            {% endifequal %}
+                        {% endfor %}
+
+                        {% if article_list.has_next %}
+                            <a class="item" href="?page={{ article_list.next_page_number}}">
+                                <i class="icon right red caret"></i>
+                            </a>
+                        {% else %}
+                            <a href="?page={{ article_list.paginators.num_pages }}" class="disabled item">
+                                <i class="icon right caret"></i>
+                            </a>    
+                        {% endif %}   
+                        </div>
+                        </div>
+                    </div>
+                    <div class="four wide column" style="padding-left:10px;">
+                        <div class="ui side outer basic segment">
+                            <h4 class="ui center aligned header" style="padding-top:10px;">编辑推荐</h4>
+                            {% for big_editor in big_editors %}
+                             <div class="ui side basic segment" style="background:url('upload/{{big_editor.image}}');height:119px;width:204px;">       <div class="ui bottom attached label" style="background-color:rgba(73, 73, 73,0.7);height:42px;">
+                                    <h5 class="ui inverted header">
+                                        <a href="/detail/{{ big_editor.id }}">
+                                            {{ big_editor.title }}
+                                        </a>
+                                    </h5>
+                                </div>
+                            </div>   
+                            {% endfor %}
+                            
+                            
+                            
+                        </div>
+                        <div class="ui list">
+                        {% for small_editor in small_editors %}
+                          <span class="sidbararrow"> </span><a class="item uilist" href="/detail/{{ small_editor.id }}">
+                              {{ small_editor.title }}
+                          </a>
+                          <div class="listdescription">{{ small_editor.publish_time|date:'Y-m-d' }}</div>
+                        {% endfor %}
+
+                        </div>
+
+                        <img src="{% static 'images/ad.png' %}" alt="" />
+                    </div>
+                </div>
+
+        </div>
+
+        </div>
+
+        <!--foot-->
+        <div class="ui basic segment foot">
+            <div class="ui basic segment foot-head" style="background-color:rgb(50, 50, 50);">
+                <div class="ui horizontal basic segments container" style="width:878px;background-color:rgb(50, 50, 50);">
+                    <div class="ui basic left aligned segment" style="padding-left:0px;">
+                            <div class="image">
+                                <img src="{% static 'images/white_zhiribao.png' %}"/>
+                            </div>
+                            <div class="ui text menu">
+                                <div class="item">
+                                    <a href="#" ><h4 class="ui red header">关于我们</h4></a>
+                                </div>
+
+                                <div class="item">
+                                    <a href="#" ><h4 class="ui red header">加入我们</h4></a>
+                                </div>
+
+                                <div class="item">
+                                    <a href="#" ><h4 class="ui red header">联系我们</h4></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#" ><h4 class="ui red header">寻求报道</h4></a>
+                                </div>
+                            </div>
+                            <div class="ui text menu">
+                                <div class="item">
+                                    <h2 class="ui header" style="color:rgb(255, 255, 255)">反馈建议:</h2>
+                                </div>
+                                <div class="item">
+                                    <h2 class="ui red header">hi@mugglecoding.com</h2>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="ui basic right aligned segment" style="padding-right:0px;">
+                        <img src="{% static 'images/qrcode.png' %}" style="position:relative;right:25px;"/>
+                        <h2 class="ui header" style="color:rgb(255, 255, 255)">扫码关注微信号</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="ui basic segment foot-body" style="border-bottom:solid red 4px; padding-top:0;padding-bottom:0;">
+                <div class="ui horizontal basic container" style="width:878px;">
+                    <div class="ui basic left aligned container" style="padding-left:0px;">
+                        <div class="item" style="height:33px;padding:0px;">
+                            <p style="font-size:16px;">Designed by Mugglecoding<br></p>
+                        </div>
+                        <div class="right floated item" style="height:16px;padding-top:0px;text-align:right;float:right">
+                            <p style="font-size:16px;">京ICP备123878345号</p>
+                        </div>
+                        <div class="item" style="height:33px;padding:0px;">
+                            <p style="font-size:16px;">Developed by XXX team</p>
+                        </div>
+                    </div>
+                    <!-- <div class="ui basic right aligned container" style="padding-right:0px;">
+                        <div class="item" style="height:16px;padding-top:0px;">
+                            <p style="font-size:16px;">京ICP备123878345号</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

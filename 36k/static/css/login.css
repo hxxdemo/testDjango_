@@ -1,0 +1,113 @@
+body{
+    background-image: url(../images/backgroundimg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.ui.header{
+    font-family:"webfont"!important;
+    font-size: 50px!important;
+    color: #f30c28;
+    height: 74px;
+    margin-top: 283px!important;
+    transform: translate(-50%);
+    position: absolute;
+    left: 50%;
+}
+.ui.image{
+    width: 17px;
+    height: 17px;
+}
+input{
+    border-radius: 31.5px!important;
+    width: 401px!important;
+    height: 31px!important;
+    background-color: #ffffff!important;
+    border: solid 1px #ededed!important;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    font-family:"webfont"!important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-family:"webfont"!important;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-family:"webfont"!important;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-family:"webfont"!important;
+}
+
+.ui.image.small{
+    width: 10px;
+    height: 10px;
+}
+label{
+    font-family:"webfont"!important;
+    font-size: 12px!important;
+    color: #9b9b9b;
+}
+.content{
+    width: 425px;
+    transform: translate(-50%);
+    position: absolute;
+    left: 50%;
+    margin-top: 389px;
+}
+.ui.right.floated.red.circular.button{
+    width: 102px;
+    height: 31px;
+    background-color: #f30c28;
+    margin-top: 6px;
+    margin-right: 5px;
+    font-family:"webfont"!important;
+    font-size: 16px!important;
+    font-weight: bold;
+    padding-top: 7px;
+}
+.footer>.red.button{
+    width: 31px!important;
+    height: 62px;
+    border-radius: 15.5px;
+    background-color: #f30c28;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    left: 50%;
+    top: 763px;
+}
+.ui.image.home{
+    width: 13.3px;
+    height: 12px;
+    transform: translate(-50%,-50%);
+    position:absolute;
+    left: 50%;
+    top:749px;
+}
+.ui.divider{
+    width: 886px;
+    height: 3px;
+    border: solid 1px #ededed;
+    margin-top: 0;
+    transform: translate(-50%);
+    position: absolute;
+    left: 50%;
+    top: 763px;
+}
+h4{
+    font-family:"webfont"!important;
+    font-size: 12px!important;
+    color: #ffffff;
+    transform: translate(-50%);
+    position:absolute;
+    margin-top: 0;
+    left: 50%;
+    top:766px;
+}
+.ui.image.title{
+    width: 150px;
+    height: 50px;
+    transform: translate(-50%);
+    position:absolute;
+    left: 50%;
+    top:814px;
+}

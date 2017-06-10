@@ -1,0 +1,210 @@
+/*header部分-*/
+.ui.red.vertical.segment {
+     box-sizing: border-box;
+ }
+
+.ui.vertical.segemnt.container.header-menu {
+    width: 800px;
+}
+
+/*主题部分（五个大新闻+编辑推荐）*/
+.ui.vertical.segment.container.article {
+    width: 800px;
+    border: transparent;
+}
+
+.ui.vertical.segment.picture {
+    border: transparent;
+    box-sizing: border-box;
+    width: 300px;
+    height: 176px;
+    margin-bottom:60px;
+}
+
+.ui.vertical.segment.text-tab {
+    position: relative;
+    border: transparent;
+    box-sizing: border-box;
+    width: 250px;
+    height: 176px;
+    margin-bottom: 60px;
+    margin-left: 55px;
+}
+
+.ui.vertical.segment.text-tab > .ui.header {
+    font-size: 20px;
+}
+
+.ui.vertical.segment.text-tab > .sub.header {
+    font-size: 14px;
+    color: #979797;
+}
+
+.ui.basic.segment.text-tab > .sub.header.metatime {
+    position: relative;
+    top: 50px;
+    font-size: 14px;
+    color: #979797;
+}
+
+.ui.vertical.segment.metatime {
+    position: relative;
+    font-size: 14px;
+    color: #979797;
+}
+
+.ui.red.segment.recommend-editor {
+    box-sizing: border-box;
+    width: 200px;
+    border-color: red;
+}
+
+.ui.red.segment.recommend-editor > .ui.header.editor {
+    position: relative;
+    left: 30%;
+}
+
+.ui.vertical.segment.label-num {
+
+    position: relative;
+    transform: translate(-50%,-50%);
+    left: 20%;
+    width: 42px;
+    height: 23px;
+}
+
+.ui.vertical.segment.label-num > .sub.header{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 45%;
+    color: white;
+    font-size:12px;
+}
+
+.ui.vertical.segment.picture-rec {
+    box-sizing: border-box;
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.ui.red.label.num {
+    position: relative;
+
+}
+
+.ui.vertical.segment.picture-rec > .ui.segment.inverted.grey.title {
+    position: relative;
+    transform: translate(0,-100%);
+    top: 72%;
+    opacity: 0.7;
+    box-sizing: border-box;
+    height: 45px;
+}
+
+.ui.vertical.segment.picture-rec > .sub.header.title {
+    color: white;
+    position: relative;
+    transform: translate(0,-100%);
+    top: 5%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.ui.vertical.segment.news-title {
+    box-sizing: border-box;
+    height: 60px;
+    border: transparent;
+    margin-top: 5px;
+}
+
+.ui.vertical.segment.text-read {
+    position: relative;
+    transform: translate(0,-50%);
+    top: 15px;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.ui.vertical.segment.ad {
+    margin-top: 30px;
+}
+
+
+.ui.red.inverted.button {
+    width: 160px;
+    position: relative;
+    transform: translate(-50%,0);
+    left: 45%;
+}
+
+/*footer黑色知日报部分*/
+.ui.inverted.vertical.segment.footer {
+    box-sizing: border-box;
+    height: 230px;
+
+}
+
+.ui.vertical.segment.footer > .ui.inverted.vertical.segment.container{
+    width: 800px;
+}
+
+.ui.inverted.vertical.segment.wx {
+    position: relative;
+    transform: translate(-50%,0);
+    left: 110%;
+}
+
+.ui.vertical.inverted.segment.scan-code {
+    position: absolute;
+    transform: translate(-50%,0);
+    left: 22%;
+    top: 85%;
+}
+.ui.image.wx {
+    width: 120px;
+    height: 120px;
+}
+
+.ui.basic.segment.top > .ui.circular.red.button {
+    width:10px;
+    padding-left:6px;
+    padding-right:27px;
+    position: absolute;
+    transform: translate(-50%,0);
+    left: 50%;
+    bottom: -10%;
+}
+
+/*底部小组信息部分*/
+.ui.vertical.segment.footer-text {
+    box-sizing: border-box;
+    height: 20px;
+}
+
+.ui.vertical.segment.footer-text > .ui.vertical.segment.container {
+    width: 800px;
+}
+
+.sidbararrow{
+  background: url('../images/Triangle.png');
+    box-sizing: border-box;
+    width: 6px;
+    height: 8px;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-top: 8px;
+}
+a.item.uilist{
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #333!important;
+  line-height: 1.5!important;
+  font-size: 12px;
+}
+ .listdescription{
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #ccc;
+  font-size: 10px;
+ }

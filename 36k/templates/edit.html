@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>知日报 - 个人修改页面</title>
+    <link rel="stylesheet" href="/static/css/semantic.css" media="screen" title="no title">
+    <link rel="stylesheet" href="/static/css/edit.css" media="screen" title="no title">
+</head>
+
+<body>
+    <div class="ui center aligned container">
+        <h1 class="ui red header">修改个人资料</h1>
+        <span id="pagep">选择头像</span>
+        <div class="ui three column grid">
+            <div class="column"></div>
+            <div class="column">
+                <div class="ui Mini images">
+                    <img class="ui red image margin-left-view" src="/static/images/fav1.png">
+                    <img class="ui image margin-left-view" src="/static/images/fav2.png">
+                    <img class="ui image margin-left-view" src="/static/images/fav3.png">
+                    <img class="ui image margin-left-view" src="/static/images/fav4.png">
+                    <img class="ui image margin-left-view" src="/static/images/fav5.png">
+                </div>
+            </div>
+            <div class="column"></div>
+        </div>
+    </div>
+    <form class="ui center form" style="margin-top: 3%">
+        <div class="field">
+            <div class="ui image icon"><img src="/static/images/usericon.png" alt="" /></div>
+            <input class="input view" style="height:27px; width: 26%;" type="text" name="username" placeholder="用户名">
+        </div>
+        <div class="field">
+            <div class="ui image icon"><img src="/static/images/lockicon.png" alt="" /></div>
+            <input class="input view" style="height:27px; width: 26%;" type="text" name="password" placeholder="密码">
+        </div>
+        <div class="field">
+            <div class="ui image icon"><img src="/static/images/lockicon.png" alt="" /></div>
+            <input class="input view" style="height:27px; width: 26%;" type="text" name="repassword" placeholder="确认密码">
+        </div>
+        <button class="ui red circular button" type="submit" style="padding:0.5%;width:26%;">完成</button>
+    </form>
+    <div class="ui center aligned container">
+        <div class="ui divider bottom"></div>
+        <button class="ui red circular button index" type="submit" style="padding:0.5%;height:60px;">
+            <img id="home" src="/static/images/homeicon.png" alt="" />
+            <p style="position:relative;top:10px;">
+                首页
+            </p>
+        </button>
+        <div class="ui image" style="position:relative;top:20px;">
+            <img src="/static/images/zhiribao.png" alt="" />
+        </div>
+    </div>
+
+</body>
+
+</html>

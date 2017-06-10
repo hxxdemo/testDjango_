@@ -1,0 +1,209 @@
+  .ui.five.item.text.menu{
+     width: 654px;
+     position: absolute;
+     top:0px;
+  }
+  .ui.red.basic.segment.top{
+    padding-left: 279px;
+    height: 81px;
+    border-bottom: solid 1px rgb(232, 231, 233);
+  }
+  .txt1{
+      position: absolute;
+      font-size: 14px;
+      top: 43px;
+      left: 1064px;
+      color: black;
+    }
+  .txt2{
+    position: absolute;
+    font-size: 14px;
+    top: 43px;
+    left: 1121px;
+    color:black;
+  }
+  .register{
+    position: absolute;
+    right: 287px;
+    top:15px;
+  }
+  .login{
+    position: absolute;
+    right: 353px;
+    top:15px;
+  }
+  .ui.red.basic.segment.rightside{
+    width: 204px;
+    position: absolute;
+    right: 277px;
+    border-left:hidden;
+
+  }
+  .ui.red.segment.rightside>div{
+    margin-bottom: 30px;
+  }
+  .sidbartagtxt{
+   position: absolute;
+      top: 1px;
+      left: 3px;
+      color: #fff;
+  }
+
+  .ui.basic.segment.leftside{
+     width: 654px;
+     height: 384px;
+     position: absolute;
+     left: 279px;
+     background:url('../images/cover2.png');
+     padding-top: 216px;
+     padding-right: 29px;
+     padding-left: 29px;
+
+  }
+
+  .image-text{
+     position: absolute;
+     top:340px;
+     left:310px;
+     width:645px;
+     height:118px;
+     color: white;
+     font-size: 40px;
+     padding-left: 0;
+     padding-right: 10px;
+     line-height: 1.3;
+  }
+  .ui.basic.segment.leftside  > span{
+     color: rgb(236, 236, 236);
+     font-size: 20px;
+     position: absolute;
+     bottom: 17px;
+     right: 29px;
+  }
+  .text-content{
+    width: 635px;
+    height: 94px;
+    position: absolute;
+    left: 307px;
+    top:519px;
+  }
+  .ui.basic.segment.mid{
+    width: 635px;
+    position: absolute;
+    left: 307px;
+    top:608px;
+    padding-left: 17px;
+    padding-top: 31px;
+  }
+
+  .article-title{
+    margin-top: 30px;
+    line-height: 3;
+  }
+  .article-image{
+    width: 600px;
+    height: 450px;
+  }
+  .left-border{
+    width: 600px;
+    height: 66px;
+    border-left: solid 3px #eaebeb;
+    margin-top: 35px;
+    padding-left: 19px;
+  }
+  .info1 {
+  position: absolute;
+  box-sizing: border-box;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+    background: rgba(73, 73, 73, 0.7);
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+.info2 {
+position: absolute;
+box-sizing: border-box;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 62px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  background: rgba(73, 73, 73, 0.7);
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom:5px;
+  padding-left: 10px;
+}
+.sidbartag{
+    position: absolute;
+    top: 0px;
+    left: 10px;
+}
+.sidbararrow{
+  background: url('../images/Triangle.png');
+    box-sizing: border-box;
+    width: 6px;
+    height: 8px;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-top: 8px;
+}
+a.item.uilist{
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #333!important;
+  line-height: 1.5!important;
+  font-size: 12px;
+}
+ .listdescription{
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #ccc;
+  font-size: 10px;
+ }
+.ui.basic.center.aligned.segment.rightside{
+  height: 119px;
+  width: 100%;
+  margin-bottom: 20px;
+ }
+ .ui.basic.segment.bottom{
+     position: absolute;
+     top:2360px;
+     left: 279px;
+     width: 655px;
+     height: 765px;
+     padding-left: 33px;
+     padding-top: 22px;
+     padding-right: 21px;
+     font-size: 16px;
+     border-top: solid 2px #f30c28;
+ }
+ .comment{
+   position: relative;
+   margin-top: 60px;
+ }
+ .time{
+   color: #9b9b9b;
+   position: relative;
+   top:-15px;;
+ }
+ .black-reply{
+   position: absolute;
+   bottom:0;
+   left: 52px;
+ }
+ .red-reply{
+   color: red;
+   position: absolute;
+   bottom: -35px;
+   left:62px;
+ }
